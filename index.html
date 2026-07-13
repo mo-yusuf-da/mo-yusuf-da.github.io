@@ -558,7 +558,7 @@
 
       <div class="hero-stats">
         <div class="stat-card">
-          <div class="stat-number">6</div>
+          <div class="stat-number" id="project-count">0</div>
           <div class="stat-label">Portfolio Projects</div>
         </div>
         <div class="stat-card">
@@ -836,7 +836,7 @@
       </div>
       <!-- ✏️ END PROJECT 3 ─────────────────────────────── -->
 
-            <!-- ✏️ PROJECT 4 — PIPELINE THROUGHPUT ANALYSIS -->
+      <!-- ✏️ PROJECT 4 — PIPELINE THROUGHPUT ANALYSIS -->
       <div class="project-card" data-bar="80">
         <div class="data-bar-track">
           <div class="data-bar-fill"></div>
@@ -971,6 +971,50 @@
       </div>
       <!-- ✏️ END PROJECT 6 ─────────────────────────────── -->
 
+      <!-- ✏️ PROJECT 7 — PURESIP SALES ANALYSIS -->
+      <div class="project-card" data-bar="65">
+        <div class="data-bar-track">
+          <div class="data-bar-fill"></div>
+        </div>
+        <div class="project-body">
+          <p class="project-tool">Power BI</p>
+          <h3 class="project-title">PureSip Beverages — FY2022 Sales Analysis</h3>
+          <p class="project-period">January – December 2022</p>
+          <p class="project-desc">
+            End-to-end sales analysis for a beverage brand across four national
+            retail partners, evaluating FY2022 performance against target,
+            seasonal trends, retailer and regional concentration, and product
+            portfolio mix across 288 transactions and $1.21M in revenue.
+          </p>
+          <div class="project-stats">
+            <div class="project-stat">
+              <span class="project-stat-num">$1.21M</span>
+              <span class="project-stat-lbl">Revenue</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat-num">288</span>
+              <span class="project-stat-lbl">Transactions</span>
+            </div>
+            <div class="project-stat">
+              <span class="project-stat-num">4</span>
+              <span class="project-stat-lbl">Retailers</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Slicers</span>
+            <span class="project-tag">Dashboard</span>
+            <span class="project-tag">Business Report</span>
+            <span class="project-tag">Regional Analysis</span>
+          </div>
+          <a class="project-link" href="https://github.com/mo-yusuf-da/puresip-sales-analysis" target="_blank" rel="noopener">
+            View on GitHub
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- ✏️ END PROJECT 7 ─────────────────────────────── -->
+
       <!-- ✏️ ADD NEW PROJECT HERE — copy any project block above
            (from the opening div.project-card to the matching end comment)
            paste it here, and fill in your new project details. -->
@@ -1008,8 +1052,13 @@
     <p>Built for portfolio · <span>Data Analyst</span></p>
   </footer>
 
-  <!-- ── JS: animate data bars on scroll ──────────────────── -->
+  <!-- ── JS: project count + animate data bars on scroll ──── -->
   <script>
+    const projectCountEl = document.getElementById('project-count');
+    if (projectCountEl) {
+      projectCountEl.textContent = document.querySelectorAll('#projects .project-card').length;
+    }
+
     const cards = document.querySelectorAll('.project-card[data-bar]');
 
     const observer = new IntersectionObserver((entries) => {
