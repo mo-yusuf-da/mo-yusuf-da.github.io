@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everyone's Pricing an AECO Recovery. Almost No One's Pricing the DUC Overhang — Mo Yusuf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --base:    #1A1A2E;
+      --blue:    #4361EE;
+      --blue-lt: #6B80F5;
+      --teal:    #06D6A0;
+      --warm:    #F8F9FA;
+      --muted:   #8B97A6;
+      --card:    #1F2A40;
+      --border:  #2A3650;
+      --serif:   'DM Serif Display', Georgia, serif;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --mono:    'JetBrains Mono', 'Fira Code', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--base);
+      color: var(--warm);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 60px;
+      background: rgba(26, 26, 46, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--mono); font-size: 0.85rem; color: var(--teal); letter-spacing: 0.04em; }
+    .nav-back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+    .nav-back:hover { color: var(--warm); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem clamp(1.5rem, 6vw, 2rem) 6rem;
+    }
+    .article-eyebrow { font-family: var(--mono); font-size: 0.72rem; color: var(--teal); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
+    .article-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; color: var(--warm); margin-bottom: 1rem; }
+    .article-meta { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin-bottom: 2.5rem; }
+
+    .article-stats { display: flex; gap: 1.25rem; margin-bottom: 2.5rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .article-stat { text-align: left; }
+    .article-stat-num { font-family: var(--mono); font-size: 1.15rem; color: var(--blue-lt); font-weight: 500; display: block; }
+    .article-stat-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; }
+
+    .article-body p { color: var(--muted); font-size: 1rem; line-height: 1.85; margin-bottom: 1.4rem; }
+    .article-body p strong { color: var(--warm); font-weight: 500; }
+    .article-body .thesis {
+      color: var(--warm);
+      font-size: 1.05rem;
+      font-weight: 500;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 2rem; margin-bottom: 2.5rem; }
+    .article-tag { font-size: 0.72rem; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 0.2rem 0.6rem; border-radius: 4px; }
+    .article-disclaimer { font-size: 0.82rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem clamp(1.5rem, 8vw, 6rem); display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+    footer p { font-size: 0.78rem; color: var(--muted); font-family: var(--mono); }
+    footer p span { color: var(--blue-lt); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">mo.yusuf</span>
+    <a href="../index.html#articles" class="nav-back">
+      <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to portfolio
+    </a>
+  </nav>
+
+  <article>
+    <p class="article-eyebrow">Market Note</p>
+    <h1 class="article-title">Everyone's Pricing an AECO Recovery. Almost No One's Pricing the 200 Wells Waiting to Flood It</h1>
+    <p class="article-meta">Mo Yusuf · July 2026</p>
+
+    <div class="article-stats">
+      <div class="article-stat"><span class="article-stat-num">~200</span><span class="article-stat-lbl">Montney DUCs (2x Normal)</span></div>
+      <div class="article-stat"><span class="article-stat-num">-$1.00 to -$1.50</span><span class="article-stat-lbl">AECO-Henry Hub Basis</span></div>
+      <div class="article-stat"><span class="article-stat-num">~2.0 Bcf/d</span><span class="article-stat-lbl">LNG Canada Phase 2 Feedgas</span></div>
+      <div class="article-stat"><span class="article-stat-num">3–5x</span><span class="article-stat-lbl">Montney EV/CF vs. 6–10x US Peers</span></div>
+    </div>
+
+    <div class="article-body">
+      <p>
+        The AECO story this year is straightforward, and the market has largely converged on it: LNG
+        Canada is pulling gas out of the WCSB for the first time, the chronic basis discount to Henry
+        Hub has narrowed from roughly -$3.00/MMBtu toward -$1.00 to -$1.50, and Phase 2 — another
+        ~2.0 Bcf/d of feedgas demand, fast-tracked through Canada's new Major Projects Office — is the
+        next catalyst analysts are underwriting as the move that gets AECO to something close to
+        parity. Montney gas names are being framed as a re-rating story, trading at 3-5x EV/CF against
+        6-10x for U.S. LNG-leveraged peers, with the gap held up as 40-80% of unpriced upside.
+      </p>
+
+      <div class="thesis">
+        My view: that framing skips over the one number that actually determines how much of this
+        price recovery producers get to keep — the roughly 200 drilled-but-uncompleted wells sitting
+        in the Montney, double the historical norm. The market is pricing a supply-demand rebalancing
+        as if supply is fixed. It isn't. It's parked.
+      </div>
+
+      <p>
+        A DUC well isn't a well that can't produce. It's a well that a producer has chosen not to
+        complete because the netback wasn't there yet. That's a capital-allocation decision, not a
+        geological constraint, and it's reversible in weeks, not years. AECO spot has already moved
+        from negative territory in late 2025 to the C$1.70-C$1.75/GJ range by early June, and forward
+        curves are pricing further improvement as LNG Canada ramps and Phase 2 sanctioning approaches.
+        Every incremental dollar of AECO recovery makes the economics on those 200 DUCs better. At
+        some point — and I'd argue it's closer than the current re-rating narrative assumes —
+        completing them becomes the highest-return capital decision on the table for names sitting on
+        that inventory, and they get turned to production fast.
+      </p>
+
+      <p>
+        That's the mechanism the bull case is underweighting. The Montney re-rating thesis treats the
+        current supply overhang as evidence of capital discipline, a sign producers have gotten
+        smarter about not chasing dry gas. It's also, more simply, an options position. Every producer
+        holding DUCs is holding a call option on AECO with a strike price close to today's forward
+        curve, and options get exercised when they move in the money. If AECO firms the way LNG
+        Canada Phase 1 ramp-up and Phase 2 sanctioning both suggest it will over the next 12-18
+        months, the DUC inventory doesn't sit on the sidelines cheering the price recovery — it
+        becomes the supply response that caps it. Deloitte and the Alberta Energy Regulator are both
+        projecting 2026 AECO averages as high as C$3.20-C$3.80. Those numbers assume production
+        discipline holds through the recovery. Two hundred parked wells is exactly the mechanism by
+        which it doesn't.
+      </p>
+
+      <p>
+        None of this breaks the long-run bull case. LNG Canada Phase 2, Cedar LNG, Woodfibre LNG, and
+        Ksi Lisims collectively represent close to 4 Bcf/d of new demand by the end of the decade, and
+        that demand is real and largely locked in. What it does is complicate the timing. The names
+        getting bid up today on a basis-closure re-rating are being priced as if the DUC overhang is a
+        rounding error. I don't think it is. I think it's the single best explanation for why AECO has
+        repeatedly disappointed the more aggressive recovery forecasts over the past eighteen months,
+        and I'd expect the same dynamic to reassert itself the next time the forward curve gets ahead
+        of itself.
+      </p>
+
+      <p>
+        If I'm right, the trade isn't "avoid Montney gas." It's "be more skeptical of the names and
+        the timelines priced for a clean, uninterrupted basis-closure story, and more interested in
+        whoever is disclosing DUC counts and completion schedules with enough transparency to actually
+        underwrite the pace of that supply response." That's a screen the current re-rating narrative
+        isn't running.
+      </p>
+    </div>
+
+    <div class="article-tags">
+      <span class="article-tag">Natural Gas</span>
+      <span class="article-tag">Montney</span>
+      <span class="article-tag">AECO Basis</span>
+      <span class="article-tag">LNG Canada</span>
+      <span class="article-tag">Independent Analysis</span>
+    </div>
+
+    <p class="article-disclaimer">
+      This note reflects my own independent read of public market and regulatory data; it is not investment advice.
+    </p>
+  </article>
+
+  <footer>
+    <p>© 2025 <span>Mo Yusuf</span></p>
+    <p>Built for portfolio · <span>Data Analyst</span></p>
+  </footer>
+
+</body>
+</html>
