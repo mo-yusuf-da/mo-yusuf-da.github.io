@@ -69,6 +69,7 @@
     .section-label { font-family: var(--mono); font-size: 0.72rem; color: var(--teal); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.6rem; }
     .section-heading { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--warm); margin-bottom: 1rem; line-height: 1.2; }
     .section-divider { width: 48px; height: 2px; background: linear-gradient(90deg, var(--blue), var(--teal)); margin-bottom: 2.5rem; border-radius: 2px; }
+    .section-intro { color: var(--muted); font-size: 0.95rem; line-height: 1.75; max-width: 62ch; margin-bottom: 2.5rem; margin-top: -1.5rem; }
     #about { border-top: 1px solid var(--border); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .about-text p { color: var(--muted); font-size: 0.97rem; line-height: 1.8; margin-bottom: 1rem; }
@@ -87,6 +88,7 @@
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .skill-tag { font-size: 0.78rem; font-weight: 500; color: var(--warm); background: rgba(67, 97, 238, 0.15); border: 1px solid rgba(67, 97, 238, 0.3); padding: 0.25rem 0.65rem; border-radius: 4px; letter-spacing: 0.01em; }
     #projects { border-top: 1px solid var(--border); }
+    #articles { border-top: 1px solid var(--border); }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
     .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s, transform 0.2s; }
     .project-card:hover { border-color: var(--blue); transform: translateY(-3px); }
@@ -139,6 +141,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#articles">Articles</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -610,6 +613,53 @@
     </div>
   </section>
 
+  <section id="articles">
+    <p class="section-label">Writing</p>
+    <h2 class="section-heading">Articles &amp; Market Notes</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">
+      Independent analysis on energy M&amp;A, infrastructure, and market pricing —
+      written to build and demonstrate analytical judgment, not just describe events.
+    </p>
+    <div class="projects-grid">
+
+      <!-- ✏️ ARTICLE 1 — CYGNET / KIWETINOHK MARKET NOTE -->
+      <div class="project-card" data-bar="0" data-orders="0" data-revenue="0">
+        <div class="project-body">
+          <p class="project-tool">Market Note</p>
+          <h3 class="project-title">The Cygnet-Kiwetinohk Deal Priced This Wrong</h3>
+          <p class="project-period">July 2026</p>
+          <p class="project-desc">
+            A look at Cygnet Energy's C$1.4B acquisition of Kiwetinohk Energy, closed
+            December 2025. Argues the modest 10.4% premium reflects a market still
+            pricing Duvernay/Montney names on production and drilling inventory, while
+            underpricing the real value driver in the basin: committed pipeline egress
+            and infrastructure control.
+          </p>
+          <div class="project-stats">
+            <div class="project-stat"><span class="project-stat-num">C$1.4B</span><span class="project-stat-lbl">Deal Value</span></div>
+            <div class="project-stat"><span class="project-stat-num">10.4%</span><span class="project-stat-lbl">Premium Paid</span></div>
+            <div class="project-stat"><span class="project-stat-num">120 MMcf/d</span><span class="project-stat-lbl">Egress Capacity</span></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Oil &amp; Gas M&amp;A</span>
+            <span class="project-tag">Duvernay / Montney</span>
+            <span class="project-tag">Independent Analysis</span>
+          </div>
+          <a class="project-link" href="articles/cygnet-kiwetinohk-market-note.html">
+            Read the note
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- ✏️ END ARTICLE 1 ─────────────────────────────── -->
+
+      <!-- ✏️ ADD NEW ARTICLE HERE — copy the block above, update the
+           title, period, description, stats, tags, and href. -->
+
+    </div>
+  </section>
+
   <section id="contact">
     <div class="contact-inner">
       <p class="section-label" style="text-align:center">Get in touch</p>
@@ -679,6 +729,7 @@
         if (entry.isIntersecting) {
           const card = entry.target;
           const fill = card.querySelector('.data-bar-fill');
+          if (!fill) return;
           const pct  = card.dataset.bar;
           setTimeout(() => { fill.style.width = pct + '%'; }, 200);
           observer.unobserve(card);
