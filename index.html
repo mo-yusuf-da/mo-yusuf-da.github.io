@@ -108,6 +108,8 @@
     .project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.84rem; font-weight: 500; color: var(--blue-lt); margin-top: auto; transition: gap 0.2s; }
     .project-link:hover { gap: 0.7rem; }
     .project-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .provenance-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.75rem; }
+    .provenance-badge.mixed { color: #06D6A0; background: rgba(6, 214, 160, 0.12); border: 1px solid rgba(6, 214, 160, 0.35); }
     #contact { border-top: 1px solid var(--border); text-align: center; }
     .contact-inner { max-width: 520px; margin: 0 auto; }
     .contact-inner p { color: var(--muted); font-size: 0.97rem; margin-bottom: 2rem; line-height: 1.7; }
@@ -301,6 +303,78 @@
     <h2 class="section-heading">Portfolio Projects</h2>
     <div class="section-divider"></div>
     <div class="projects-grid">
+
+      <!-- ✏️ PROJECT 0A — PRODUCER SETTLEMENT & EQUALIZATION MODEL -->
+      <div class="project-card" data-bar="85" data-orders="0" data-revenue="0">
+        <div class="data-bar-track"><div class="data-bar-fill"></div></div>
+        <div class="project-body">
+          <p class="project-tool">Microsoft Excel</p>
+          <span class="provenance-badge mixed">Real WTI Price + Synthetic Data</span>
+          <h3 class="project-title">Producer Settlement &amp; Equalization Model</h3>
+          <p class="project-period">2026</p>
+          <p class="project-desc">
+            A fully formula-driven Excel model simulating a monthly producer settlement
+            at a shared oil and gas facility — equalizing metered volumes for meter
+            calibration variance, applying facility shrinkage, and allocating operating
+            cost pro-rata to calculate a net settlement per producer. Sales price is real,
+            publicly sourced EIA WTI Cushing spot data; producer names, volumes, and meter
+            factors are hypothetical and clearly labeled as such.
+          </p>
+          <div class="project-stats">
+            <div class="project-stat"><span class="project-stat-num">$79.71</span><span class="project-stat-lbl">Real WTI Price/bbl</span></div>
+            <div class="project-stat"><span class="project-stat-num">4</span><span class="project-stat-lbl">Producers Modeled</span></div>
+            <div class="project-stat"><span class="project-stat-num">0</span><span class="project-stat-lbl">Formula Errors</span></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Equalization</span>
+            <span class="project-tag">Settlement</span>
+            <span class="project-tag">Financial Modeling</span>
+            <span class="project-tag">EIA Data</span>
+          </div>
+          <a class="project-link" href="https://github.com/mo-yusuf-da/producer-settlement-equalization-model" target="_blank" rel="noopener">
+            View on GitHub
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- ✏️ END PROJECT 0A ─────────────────────────────── -->
+
+      <!-- ✏️ PROJECT 0B — FACILITY BLEND OPTIMIZATION DASHBOARD -->
+      <div class="project-card" data-bar="82" data-orders="0" data-revenue="0">
+        <div class="data-bar-track"><div class="data-bar-fill"></div></div>
+        <div class="project-body">
+          <p class="project-tool">Excel</p>
+          <span class="provenance-badge mixed">Real AER Data + Synthetic Facility Sim.</span>
+          <h3 class="project-title">Facility Blend Optimization Dashboard</h3>
+          <p class="project-period">2026</p>
+          <p class="project-desc">
+            An analysis of Alberta crude oil production composition, combining real
+            Alberta Energy Regulator (AER) production and crude-type mix data with a
+            transparently labeled synthetic facility-level blend simulation. Tracks
+            blend variance against target ratios, automatically flags off-spec months,
+            and separates real provincial data from illustrative facility data on
+            distinct, color-coded tabs.
+          </p>
+          <div class="project-stats">
+            <div class="project-stat"><span class="project-stat-num">530K</span><span class="project-stat-lbl">bbl/d, AER 2024</span></div>
+            <div class="project-stat"><span class="project-stat-num">56%</span><span class="project-stat-lbl">Light Crude Share</span></div>
+            <div class="project-stat"><span class="project-stat-num">±2%</span><span class="project-stat-lbl">Off-Spec Threshold</span></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">AER Data</span>
+            <span class="project-tag">Blend Analysis</span>
+            <span class="project-tag">Production Mix</span>
+            <span class="project-tag">Data Provenance</span>
+          </div>
+          <a class="project-link" href="https://github.com/mo-yusuf-da/facility-blend-optimization-dashboard" target="_blank" rel="noopener">
+            View on GitHub
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- ✏️ END PROJECT 0B ─────────────────────────────── -->
 
       <!-- ✏️ PROJECT 1 — SALIENT VENTURE
            data-orders / data-revenue feed the hero stat totals — use 0 if
